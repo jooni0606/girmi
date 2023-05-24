@@ -1,0 +1,53 @@
+server:
+  port: 80
+  servlet:
+    context-path: /
+
+rest-server:
+  apis:
+    data:
+      mybatis:
+        test: http://localhost:8041/data-mybatis/test
+
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    urls:
+      - url: /v3/api-docs
+        name: Gateway
+        primaryName: Gateway
+      - url: /service-common/v3/api-docs
+        name: Service Common
+        primaryName: Service Common
+      - url: /data-mybatis/v3/api-docs
+        name: Data Mybatis
+        primaryName: Data Mybatis
+
+spring:
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      default-filters:
+        - name: GlobalFilter
+          args:
+            baseMessage: Girmi Gateway GlobalFilter
+            preLogger: true
+            postLogger: true
+      routes:
+        - id: service-common
+          uri: http://localhost:8030
+          predicates:
+            - Path=/service-common/**
+        - id: data-mybatis
+          uri: http://localhost:8041
+          predicates:
+            - Path=/data-mybatis/**
+
+
+logging:
+  config: classpath:config/logging.xml

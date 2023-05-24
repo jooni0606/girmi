@@ -1,0 +1,5 @@
+rootProject.name = 'backend'
+include 'data-mybatis'
+include 'library-common'
+include 'service-common'
+include 'girmi-gateway'
