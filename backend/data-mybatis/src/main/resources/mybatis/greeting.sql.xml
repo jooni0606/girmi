@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.girmi.data.mybatis.apis.test.TestMapper">
-    <select id="getTest" resultType="com.girmi.model.TestVO">
+<mapper namespace="com.girmi.data.mybatis.apis.greeting.GreetingMapper">
+    <select id="getGreeting" resultType="com.girmi.model.GreetingVO">
         SELECT
             ID
         , TEXT

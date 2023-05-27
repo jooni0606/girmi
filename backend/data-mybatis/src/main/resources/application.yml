@@ -3,12 +3,14 @@ server:
   servlet:
     context-path: /data-mybatis
 
+
 springdoc:
   api-docs:
     enabled: true
   swagger-ui:
     enabled: true
     path: /swagger-ui.html
+
 
 spring:
   datasource:

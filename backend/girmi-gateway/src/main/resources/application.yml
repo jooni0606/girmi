@@ -1,31 +1,12 @@
 server:
-  port: 80
+  port: 443
   servlet:
     context-path: /
-
-rest-server:
-  apis:
-    data:
-      mybatis:
-        test: http://localhost:8041/data-mybatis/test
-
-springdoc:
-  enable-native-support: true
-  api-docs:
-    enabled: true
-  swagger-ui:
-    enabled: true
-    path: /swagger-ui.html
-    urls:
-      - url: /v3/api-docs
-        name: Gateway
-        primaryName: Gateway
-      - url: /service-common/v3/api-docs
-        name: Service Common
-        primaryName: Service Common
-      - url: /data-mybatis/v3/api-docs
-        name: Data Mybatis
-        primaryName: Data Mybatis
+  ssl:
+    key-store: girmi-keystore.p12
+    key-store-type: PKCS12
+    key-store-password: develop
+    key-alias: girmi-keystore
 
 spring:
   main:
