@@ -1,6 +1,7 @@
 HELP.md
 .gradle
 temp.txt
+temp
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
