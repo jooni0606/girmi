@@ -1,7 +1,7 @@
 package com.girmi.data.mybatis.apis.greeting;
 
 
-import com.girmi.model.GreetingVO;
+import com.girmi.models.GreetingVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

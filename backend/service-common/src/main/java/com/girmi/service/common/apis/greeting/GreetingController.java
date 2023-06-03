@@ -1,6 +1,6 @@
 package com.girmi.service.common.apis.greeting;
 
-import com.girmi.model.GreetingVO;
+import com.girmi.models.GreetingVO;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

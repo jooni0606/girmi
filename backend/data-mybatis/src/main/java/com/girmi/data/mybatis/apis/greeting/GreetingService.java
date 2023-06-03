@@ -1,6 +1,6 @@
 package com.girmi.data.mybatis.apis.greeting;
 
-import com.girmi.model.GreetingVO;
+import com.girmi.models.GreetingVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

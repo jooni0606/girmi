@@ -28,6 +28,12 @@ spring:
           uri: http://localhost:8041
           predicates:
             - Path=/data-mybatis/**
+        - id: data-jpa
+          uri: http://localhost:8042
+          predicates:
+            - Path=/data-jpa/**
+
+
 
 
 logging:

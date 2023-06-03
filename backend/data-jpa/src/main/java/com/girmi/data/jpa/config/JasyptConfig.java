@@ -1,4 +1,4 @@
-package com.girmi.data.mybatis.config;
+package com.girmi.data.jpa.config;
 
 import com.girmi.constants.DataConfig;
 import org.jasypt.encryption.StringEncryptor;

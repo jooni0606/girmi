@@ -1,4 +1,4 @@
-package com.girmi.constant;
+package com.girmi.constants;
 
 public class RestUrlRoot {
 
