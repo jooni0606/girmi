@@ -26,24 +26,24 @@ now_path = BashOperator(
 
 download_launches = BashOperator(
     task_id="download_launches",
-    bash_command="curl -o /Users/joonhyounglee/Develop/data_temp/launches.json -L 'https://ll.thespacedevs.com/2.0.0/launch/upcoming'",  # noqa: E501
+    bash_command="curl -o /tmp/launches.json -L 'https://ll.thespacedevs.com/2.0.0/launch/upcoming'",  # noqa: E501
     dag=dag,
 )
 
 
 def _get_pictures():
     # Ensure directory exists
-    pathlib.Path("/Users/joonhyounglee/Develop/data_temp/images").mkdir(parents=True, exist_ok=True)
+    pathlib.Path("/tmp/images").mkdir(parents=True, exist_ok=True)
 
     # Download all pictures in launches.json
-    with open("/Users/joonhyounglee/Develop/data_temp/launches.json") as f:
+    with open("/tmp/launches.json") as f:
         launches = json.load(f)
         image_urls = [launch["image"] for launch in launches["results"]]
         for image_url in image_urls:
             try:
                 response = requests.get(image_url)
                 image_filename = image_url.split("/")[-1]
-                target_file = f"/Users/joonhyounglee/Develop/data_temp/images/{image_filename}"
+                target_file = f"/tmp/images/{image_filename}"
                 with open(target_file, "wb") as f:
                     f.write(response.content)
                 print(f"Downloaded {image_url} to {target_file}")
@@ -59,7 +59,7 @@ get_pictures = PythonOperator(
 
 notify = BashOperator(
     task_id="notify",
-    bash_command='echo "There are now $(ls /Users/joonhyounglee/Develop/data_temp/images/ | wc -l) images."',
+    bash_command='echo "There are now $(ls /tmp/images/ | wc -l) images."',
     dag=dag,
 )
 
