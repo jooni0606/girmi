@@ -1,41 +1,0 @@
-[2024-07-28T08:30:19.242+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.download_launches manual__2024-07-28T08:30:18.625151+00:00 [queued]>
-[2024-07-28T08:30:19.246+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.download_launches manual__2024-07-28T08:30:18.625151+00:00 [queued]>
-[2024-07-28T08:30:19.247+0000] {taskinstance.py:1368} INFO - 
---------------------------------------------------------------------------------
-[2024-07-28T08:30:19.247+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
-[2024-07-28T08:30:19.247+0000] {taskinstance.py:1370} INFO - 
---------------------------------------------------------------------------------
-[2024-07-28T08:30:19.253+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): download_launches> on 2024-07-28 08:30:18.625151+00:00
-[2024-07-28T08:30:19.256+0000] {standard_task_runner.py:52} INFO - Started process 686 to run task
-[2024-07-28T08:30:19.264+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'download_launches', 'manual__2024-07-28T08:30:18.625151+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/rocket.py', '--cfg-path', '/tmp/tmp5w9v1_bt', '--error-file', '/tmp/tmpyhyfkdmz']
-[2024-07-28T08:30:19.267+0000] {standard_task_runner.py:80} INFO - Job 10: Subtask download_launches
-[2024-07-28T08:30:19.300+0000] {task_command.py:371} INFO - Running <TaskInstance: download_rocket_launches.download_launches manual__2024-07-28T08:30:18.625151+00:00 [running]> on host 82875c12dd4e
-[2024-07-28T08:30:19.491+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
-AIRFLOW_CTX_DAG_OWNER=***
-AIRFLOW_CTX_DAG_ID=download_rocket_launches
-AIRFLOW_CTX_TASK_ID=download_launches
-AIRFLOW_CTX_EXECUTION_DATE=2024-07-28T08:30:18.625151+00:00
-AIRFLOW_CTX_TRY_NUMBER=1
-AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-28T08:30:18.625151+00:00
-[2024-07-28T08:30:19.492+0000] {subprocess.py:62} INFO - Tmp dir root location: 
- /tmp
-[2024-07-28T08:30:19.492+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', "curl -o /Users/joonhyounglee/Develop/data_temp/launches.json -L 'https://ll.thespacedevs.com/2.0.0/launch/upcoming'"]
-[2024-07-28T08:30:19.498+0000] {subprocess.py:85} INFO - Output:
-[2024-07-28T08:30:19.507+0000] {subprocess.py:92} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-[2024-07-28T08:30:19.507+0000] {subprocess.py:92} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
-[2024-07-28T08:30:20.206+0000] {subprocess.py:92} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[2024-07-28T08:30:20.899+0000] {subprocess.py:92} INFO - Warning: Failed to create the file
-[2024-07-28T08:30:20.900+0000] {subprocess.py:92} INFO - Warning: /Users/joonhyounglee/Develop/data_temp/launches.json: No such file or
-[2024-07-28T08:30:20.901+0000] {subprocess.py:92} INFO - Warning: directory
-[2024-07-28T08:30:20.901+0000] {subprocess.py:92} INFO -   5 27120    5  1360    0     0    977      0  0:00:27  0:00:01  0:00:26   977
-[2024-07-28T08:30:20.902+0000] {subprocess.py:92} INFO - curl: (23) Failure writing output to destination
-[2024-07-28T08:30:20.903+0000] {subprocess.py:96} INFO - Command exited with return code 23
-[2024-07-28T08:30:20.925+0000] {taskinstance.py:1902} ERROR - Task failed with exception
-Traceback (most recent call last):
-  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
-    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
-airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 23.
-[2024-07-28T08:30:20.929+0000] {taskinstance.py:1412} INFO - Marking task as FAILED. dag_id=download_rocket_launches, task_id=download_launches, execution_date=20240728T083018, start_date=20240728T083019, end_date=20240728T083020
-[2024-07-28T08:30:20.941+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 10 for task download_launches (Bash command failed. The command returned a non-zero exit code 23.; 686)
-[2024-07-28T08:30:20.950+0000] {local_task_job.py:156} INFO - Task exited with return code 1
-[2024-07-28T08:30:20.979+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check
