@@ -1,0 +1,12 @@
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
+
+	implementation project(':library-common')
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

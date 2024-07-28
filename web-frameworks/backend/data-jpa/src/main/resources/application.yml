@@ -1,0 +1,30 @@
+server:
+  port: 8042
+  servlet:
+    context-path: /data-jpa
+
+cors:
+  allow:
+    origins: http://localhost:4000
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/develop?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+    username: develop
+    password: ENC(O7Ip4KEWuUE9DEMsHbhtIg==)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    mapping-resources:
+      - queries/user.xml 
+
+

@@ -1,0 +1,50 @@
+[2024-07-28T08:42:38.851+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.now_path manual__2024-07-28T08:42:38.043168+00:00 [queued]>
+[2024-07-28T08:42:38.856+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.now_path manual__2024-07-28T08:42:38.043168+00:00 [queued]>
+[2024-07-28T08:42:38.856+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-28T08:42:38.856+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2024-07-28T08:42:38.856+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-28T08:42:38.862+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): now_path> on 2024-07-28 08:42:38.043168+00:00
+[2024-07-28T08:42:38.865+0000] {standard_task_runner.py:52} INFO - Started process 838 to run task
+[2024-07-28T08:42:38.867+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'now_path', 'manual__2024-07-28T08:42:38.043168+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/rocket.py', '--cfg-path', '/tmp/tmp7xegme62', '--error-file', '/tmp/tmpdiujg30k']
+[2024-07-28T08:42:38.868+0000] {standard_task_runner.py:80} INFO - Job 16: Subtask now_path
+[2024-07-28T08:42:38.903+0000] {task_command.py:371} INFO - Running <TaskInstance: download_rocket_launches.now_path manual__2024-07-28T08:42:38.043168+00:00 [running]> on host 82875c12dd4e
+[2024-07-28T08:42:39.031+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=download_rocket_launches
+AIRFLOW_CTX_TASK_ID=now_path
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-28T08:42:38.043168+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-28T08:42:38.043168+00:00
+[2024-07-28T08:42:39.032+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-07-28T08:42:39.032+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'ls -l /']
+[2024-07-28T08:42:39.037+0000] {subprocess.py:85} INFO - Output:
+[2024-07-28T08:42:39.044+0000] {subprocess.py:92} INFO - total 92
+[2024-07-28T08:42:39.044+0000] {subprocess.py:92} INFO - -rw-rw-r--   1 root root   282 Aug 23  2022 ***-scheduler-autorestart
+[2024-07-28T08:42:39.044+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Aug 23  2022 bin
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - drwxr-xr-x   2 root root  4096 Jun 30  2022 boot
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - -rwxrwxr-x   1 root root   562 Aug 23  2022 clean-logs
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - drwxr-xr-x   5 root root   340 Jul 28 06:02 dev
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - -rwxrwxr-x   1 root root 11062 Aug 23  2022 entrypoint
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Jul 28 06:02 etc
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Aug 23  2022 home
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Aug 23  2022 lib
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - drwxr-xr-x   2 root root  4096 Aug 22  2022 media
+[2024-07-28T08:42:39.045+0000] {subprocess.py:92} INFO - drwxr-xr-x   2 root root  4096 Aug 22  2022 mnt
+[2024-07-28T08:42:39.046+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Aug 23  2022 opt
+[2024-07-28T08:42:39.046+0000] {subprocess.py:92} INFO - dr-xr-xr-x 282 root root     0 Jul 28 06:02 proc
+[2024-07-28T08:42:39.046+0000] {subprocess.py:92} INFO - drwx------   1 root root  4096 Dec 16  2023 root
+[2024-07-28T08:42:39.046+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Aug 23  2022 run
+[2024-07-28T08:42:39.046+0000] {subprocess.py:92} INFO - drwxr-xr-x   2 root root  4096 Aug 22  2022 sbin
+[2024-07-28T08:42:39.046+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Aug 23  2022 scripts
+[2024-07-28T08:42:39.046+0000] {subprocess.py:92} INFO - drwxr-xr-x   2 root root  4096 Aug 22  2022 srv
+[2024-07-28T08:42:39.046+0000] {subprocess.py:92} INFO - dr-xr-xr-x  11 root root     0 Jul 28 06:02 sys
+[2024-07-28T08:42:39.047+0000] {subprocess.py:92} INFO - drwxrwxrwt   1 root root  4096 Jul 28 08:42 tmp
+[2024-07-28T08:42:39.047+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Aug 22  2022 usr
+[2024-07-28T08:42:39.047+0000] {subprocess.py:92} INFO - drwxr-xr-x   1 root root  4096 Aug 22  2022 var
+[2024-07-28T08:42:39.047+0000] {subprocess.py:96} INFO - Command exited with return code 0
+[2024-07-28T08:42:39.061+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=download_rocket_launches, task_id=now_path, execution_date=20240728T084238, start_date=20240728T084238, end_date=20240728T084239
+[2024-07-28T08:42:39.091+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-07-28T08:42:39.113+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

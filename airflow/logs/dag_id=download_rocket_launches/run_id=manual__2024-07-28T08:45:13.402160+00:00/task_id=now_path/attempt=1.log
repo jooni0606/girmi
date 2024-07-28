@@ -1,0 +1,34 @@
+[2024-07-28T08:45:14.669+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.now_path manual__2024-07-28T08:45:13.402160+00:00 [queued]>
+[2024-07-28T08:45:14.673+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.now_path manual__2024-07-28T08:45:13.402160+00:00 [queued]>
+[2024-07-28T08:45:14.673+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-28T08:45:14.673+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2024-07-28T08:45:14.674+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-28T08:45:14.679+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): now_path> on 2024-07-28 08:45:13.402160+00:00
+[2024-07-28T08:45:14.682+0000] {standard_task_runner.py:52} INFO - Started process 882 to run task
+[2024-07-28T08:45:14.686+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'now_path', 'manual__2024-07-28T08:45:13.402160+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/rocket.py', '--cfg-path', '/tmp/tmpk1w7yx9e', '--error-file', '/tmp/tmpq8wj5f06']
+[2024-07-28T08:45:14.687+0000] {standard_task_runner.py:80} INFO - Job 20: Subtask now_path
+[2024-07-28T08:45:14.739+0000] {task_command.py:371} INFO - Running <TaskInstance: download_rocket_launches.now_path manual__2024-07-28T08:45:13.402160+00:00 [running]> on host 82875c12dd4e
+[2024-07-28T08:45:14.889+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=download_rocket_launches
+AIRFLOW_CTX_TASK_ID=now_path
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-28T08:45:13.402160+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-28T08:45:13.402160+00:00
+[2024-07-28T08:45:14.889+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-07-28T08:45:14.890+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'ls -l /tmp']
+[2024-07-28T08:45:14.895+0000] {subprocess.py:85} INFO - Output:
+[2024-07-28T08:45:14.898+0000] {subprocess.py:92} INFO - total 320
+[2024-07-28T08:45:14.898+0000] {subprocess.py:92} INFO - drwx------ 2 *** root   4096 Jul 28 08:45 ***tmpv0ayywpe
+[2024-07-28T08:45:14.898+0000] {subprocess.py:92} INFO - drwxrwxr-x 2 *** root   4096 Jul 28 08:05 images
+[2024-07-28T08:45:14.899+0000] {subprocess.py:92} INFO - -rw-rw-r-- 1 *** root  27120 Jul 28 08:04 launches.json
+[2024-07-28T08:45:14.899+0000] {subprocess.py:92} INFO - drwx------ 2 *** root   4096 Jul 28 06:02 pymp-xyqpdouk
+[2024-07-28T08:45:14.899+0000] {subprocess.py:92} INFO - -rw------- 1 root    root 285222 Aug 23  2022 tmppn1s8p7j
+[2024-07-28T08:45:14.899+0000] {subprocess.py:92} INFO - -rw------- 1 *** root      0 Jul 28 08:45 tmpq8wj5f06
+[2024-07-28T08:45:14.899+0000] {subprocess.py:96} INFO - Command exited with return code 0
+[2024-07-28T08:45:14.913+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=download_rocket_launches, task_id=now_path, execution_date=20240728T084513, start_date=20240728T084514, end_date=20240728T084514
+[2024-07-28T08:45:14.957+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-07-28T08:45:14.983+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
