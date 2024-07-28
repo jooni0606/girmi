@@ -1,6 +1,0 @@
-### backend 블로그/책 참고해서 코딩해보기
-
-## 해볼꺼(했으면 지우고 할꺼 생각나면 추가)
-- access-log
-- swagger-ui 통합
-- google code style 적용
